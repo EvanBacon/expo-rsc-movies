@@ -1,4 +1,4 @@
-import { Icon, Label, NativeTabs } from "expo-router/unstable-native-tabs";
+import Tabs from "@/components/ui/Tabs";
 import { StatusBar } from "expo-status-bar";
 import "react-native-reanimated";
 
@@ -11,16 +11,21 @@ export default function RootLayout() {
   return (
     <ThemeProvider>
       <ReanimatedScreenProvider>
-        <NativeTabs>
-          <NativeTabs.Trigger name="(index)" role="search">
-            <Label>Search</Label>
-            <Icon sf="magnifyingglass" />
-          </NativeTabs.Trigger>
-          <NativeTabs.Trigger name="(settings)">
-            <Label>From Expo</Label>
-            <Icon sf="app.gift.fill" />
-          </NativeTabs.Trigger>
-        </NativeTabs>
+        {process.env.EXPO_OS === "web" && (
+          <meta name="apple-itunes-app" content="app-id=6745745461" />
+        )}
+        <Tabs>
+          <Tabs.Screen
+            name="(index)"
+            title="Search"
+            systemImage="magnifyingglass"
+          />
+          <Tabs.Screen
+            name="(settings)"
+            title="From Expo"
+            systemImage="app.gift.fill"
+          />
+        </Tabs>
       </ReanimatedScreenProvider>
       {process.env.EXPO_OS === "android" && <StatusBar style="auto" />}
     </ThemeProvider>
