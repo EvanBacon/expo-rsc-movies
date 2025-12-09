@@ -5,15 +5,15 @@ import "react-native-reanimated";
 import ThemeProvider from "@/components/ui/ThemeProvider";
 import { ReanimatedScreenProvider } from "react-native-screens/reanimated";
 
-import React from "react";
-
 export { ErrorBoundary } from "expo-router";
 
 export default function RootLayout() {
   return (
     <ThemeProvider>
       <ReanimatedScreenProvider>
-        <meta name="apple-itunes-app" content="app-id=6745745461" />
+        {process.env.EXPO_OS === "web" && (
+          <meta name="apple-itunes-app" content="app-id=6745745461" />
+        )}
         <Tabs>
           <Tabs.Screen
             name="(index)"

@@ -1,8 +1,8 @@
 diff --git a/node_modules/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js b/node_modules/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js
-index 38e04fb..24cc8ef 100644
+index c95b085..3a32a71 100644
 --- a/node_modules/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js
 +++ b/node_modules/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js
-@@ -800,9 +800,9 @@
+@@ -816,9 +816,9 @@
          return bound
            ? "fulfilled" === bound.status
              ? callServer(id, bound.value.concat(args))
@@ -16,10 +16,10 @@ index 38e04fb..24cc8ef 100644
        }
        var id = metaData.id,
 diff --git a/node_modules/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.production.js b/node_modules/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.production.js
-index 7a5db2b..74dbad0 100644
+index 70b77aa..4ead3d7 100644
 --- a/node_modules/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.production.js
 +++ b/node_modules/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.production.js
-@@ -512,9 +512,9 @@ function createBoundServerReference(metaData, callServer) {
+@@ -519,9 +519,9 @@ function createBoundServerReference(metaData, callServer) {
      return bound
        ? "fulfilled" === bound.status
          ? callServer(id, bound.value.concat(args))
