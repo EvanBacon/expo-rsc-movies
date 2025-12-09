@@ -717,7 +717,7 @@ export function Section({
           : {
               borderCurve: "continuous",
               overflow: "hidden",
-              borderRadius: 10,
+              borderRadius: 24,
               backgroundColor: Colors.secondarySystemGroupedBackground,
             },
         props.style,
