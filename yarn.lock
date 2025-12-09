@@ -3751,6 +3751,11 @@ expo-font@~14.0.10:
   dependencies:
     fontfaceobserver "^2.1.0"
 
+expo-glass-effect@~0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/expo-glass-effect/-/expo-glass-effect-0.1.8.tgz#cede6e75b65365216ce6ed205563b6f147a95c3b"
+  integrity sha512-9Cp17ax0Fpugue8+Bd7Ndl/dSAvGmt4bQ5mQLw9zc1A2lctUse3cEg9nI7TnDJiwKf+A/VAPN6+3K12JVMYgZg==
+
 expo-haptics@~15.0.8:
   version "15.0.8"
   resolved "https://registry.yarnpkg.com/expo-haptics/-/expo-haptics-15.0.8.tgz#f93f895ac5d76fe0c5ac26b3644e1dbb097833f3"

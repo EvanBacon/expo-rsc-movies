@@ -4,11 +4,30 @@ import React from "react";
 
 // Better transitions on web, no changes on native.
 import NativeStack from "@/components/layout/modalNavigator";
+import { isLiquidGlassAvailable } from "expo-glass-effect";
+
+import * as AC from "@bacons/apple-colors";
 
 // These are the default stack options for iOS, they disable on other platforms.
 const DEFAULT_STACK_HEADER: NativeStackNavigationOptions =
   process.env.EXPO_OS !== "ios"
     ? {}
+    : isLiquidGlassAvailable()
+    ? {
+        // iOS 26 + liquid glass
+        headerTransparent: true,
+        headerShadowVisible: false,
+        headerLargeTitleShadowVisible: false,
+        headerLargeStyle: {
+          backgroundColor: "transparent",
+        },
+        headerTitleStyle: {
+          color: AC.label as any,
+        },
+        headerLargeTitle: true,
+        headerBlurEffect: "none",
+        headerBackButtonDisplayMode: "minimal",
+      }
     : {
         headerTransparent: true,
         headerBlurEffect: "systemChromeMaterial",
@@ -67,9 +86,8 @@ export default function Stack({
         ...screenOptions,
       }}
       {...props}
-    >
-      {processedChildren}
-    </NativeStack>
+      children={processedChildren}
+    />
   );
 }
 
