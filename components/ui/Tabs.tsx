@@ -9,24 +9,11 @@ import React from "react";
 import { PlatformPressable } from "@react-navigation/elements";
 import { Tabs as NativeTabs } from "expo-router";
 import { Platform, useWindowDimensions } from "react-native";
-import BlurTabBarBackground from "./TabBarBackground";
 
 // These are the default tab options for iOS, they disable on other platforms.
-const DEFAULT_TABS: BottomTabNavigationOptions =
-  process.env.EXPO_OS !== "ios"
-    ? {
-        headerShown: false,
-      }
-    : {
-        headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: BlurTabBarBackground,
-        tabBarStyle: {
-          // Use a transparent background on iOS to show the blur effect
-          position: "absolute",
-        },
-      };
-
+const DEFAULT_TABS: BottomTabNavigationOptions = {
+  headerShown: false,
+};
 export default function Tabs({
   screenOptions,
   children,
