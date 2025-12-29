@@ -24,7 +24,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
-        "backgroundColor": "#000"
+        "backgroundColor": "#000000"
       }
     },
     "plugins": [
