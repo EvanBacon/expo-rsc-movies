@@ -8,6 +8,7 @@
     "scheme": "x.movie",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+
     "web": {
       "output": "server",
       "favicon": "./assets/images/icon.png"
@@ -23,22 +24,25 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
-        "backgroundColor": "#000"
+        "backgroundColor": "#000000"
       }
     },
     "plugins": [
-      "expo-router",
+      [
+        "expo-router",
+        {
+          "origin": "https://flix--app.expo.app/"
+        }
+      ],
       [
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#000"
+          "backgroundColor": "#000000"
         }
-      ],
-      "expo-font",
-      "expo-web-browser"
+      ]
     ],
     "experiments": {
       "reactServerFunctions": true,
@@ -49,6 +53,12 @@
       "eas": {
         "projectId": "07793961-ad0c-43ca-bce1-301475ecd214"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/07793961-ad0c-43ca-bce1-301475ecd214"
     }
   }
 }
