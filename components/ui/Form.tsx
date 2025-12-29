@@ -696,7 +696,7 @@ export function Section({
     }
 
     return (
-      <React.Fragment key={child.key ?? String(index)}>
+      <React.Fragment key={String(index)}>
         {child}
         {!isLastChild && <Separator />}
       </React.Fragment>
