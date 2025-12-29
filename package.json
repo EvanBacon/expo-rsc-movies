@@ -16,7 +16,7 @@
   "dependencies": {
     "@bacons/apple-colors": "^0.0.8",
     "@expo/vector-icons": "^15.0.3",
-    "expo": "^54.0.27",
+    "expo": "^54.0.30",
     "expo-application": "~7.0.8",
     "expo-blur": "~15.0.8",
     "expo-constants": "~18.0.11",

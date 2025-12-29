@@ -3,7 +3,10 @@ import { Stack, useLocalSearchParams } from "expo-router";
 import React from "react";
 import { View } from "react-native";
 
-import { ShowPageBody } from "@/components/show-header-background";
+import {
+  ParallaxImageWrapper,
+  ShowPageBody,
+} from "@/components/show-header-background";
 
 export { ErrorBoundary } from "expo-router";
 
@@ -27,9 +30,11 @@ function MovieSkeleton() {
   return (
     <View>
       {/* Hero Section */}
-      <View
-        style={{ height: 300, backgroundColor: "rgba(120,120,128,0.12)" }}
-      />
+      <ParallaxImageWrapper>
+        <View
+          style={{ height: 300, backgroundColor: "rgba(120,120,128,0.12)" }}
+        />
+      </ParallaxImageWrapper>
 
       {/* Overview Section */}
       <View style={{ padding: 16, gap: 8 }}>

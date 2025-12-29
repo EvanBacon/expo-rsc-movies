@@ -460,7 +460,7 @@ async function MediaCast({ id, type }: { id: string; type: MediaType }) {
 
   return (
     <HorizontalList title="Cast & Crew">
-      {credits.cast.slice(0, 10).map((person: any) => (
+      {credits.cast?.slice(0, 10).map((person: any) => (
         <CastCard key={person.id} person={person} />
       ))}
     </HorizontalList>
@@ -496,7 +496,7 @@ async function SimilarMedia({ id, type }: { id: string; type: MediaType }) {
 
   return (
     <HorizontalList title="More Like This">
-      {similar.results.slice(0, 10).map((media: any) => (
+      {similar.results?.slice(0, 10).map((media: any) => (
         <MediaCard key={media.id} media={media} type={type} />
       ))}
     </HorizontalList>

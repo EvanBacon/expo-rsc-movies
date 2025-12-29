@@ -12,7 +12,15 @@ export default function RootLayout() {
     <ThemeProvider>
       <ReanimatedScreenProvider>
         <NativeTabs>
-          <NativeTabs.Trigger name="(index)" role="search">
+          <NativeTabs.Trigger
+            name="(index)"
+            role="search"
+            options={{
+              specialEffects: {
+                overrideScrollViewContentInsetAdjustmentBehavior: true,
+              },
+            }}
+          >
             <Label>Search</Label>
             <Icon sf="magnifyingglass" />
           </NativeTabs.Trigger>

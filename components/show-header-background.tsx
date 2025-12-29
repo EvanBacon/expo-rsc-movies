@@ -107,6 +107,10 @@ export function ShowPageBody({ children }: { children: React.ReactNode }) {
         style={{ backgroundColor: AC.systemGroupedBackground }}
         automaticallyAdjustsScrollIndicatorInsets={true}
         contentInsetAdjustmentBehavior="never"
+        automaticallyAdjustContentInsets={false}
+        showsVerticalScrollIndicator={false}
+        // Hack to fix issue with react-native-screens forcing the indicator insets to be automatic.
+        contentInset={{ top: -1 }}
       >
         <Stack.Screen
           options={{
