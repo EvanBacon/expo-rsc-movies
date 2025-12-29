@@ -175,7 +175,7 @@ export async function renderPersonDetails(id: string) {
           style={{ paddingHorizontal: 16 }}
         >
           <TouchableBounce style={{ marginRight: 16 }}>
-            <Text style={{ color: AC.systemBlue }}>
+            <Text style={{ color: AC.systemPurple }}>
               All ({allCredits.length})
             </Text>
           </TouchableBounce>

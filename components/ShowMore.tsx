@@ -23,7 +23,7 @@ export default function ShowMore({ text }: { text: string }) {
         <TouchableOpacity onPress={() => setShowMore(!showMore)}>
           <Text
             style={{
-              color: AC.systemBlue,
+              color: AC.systemPurple,
               marginTop: 8,
               fontSize: 16,
             }}

@@ -79,7 +79,7 @@ const MediaCard = ({
           <Text
             style={{
               fontSize: 12,
-              color: AC.systemBlue,
+              color: AC.systemPurple,
             }}
           >
             ★ {rating.toFixed(1)}
@@ -395,7 +395,7 @@ function TrendingSection({ title, items }: { title: string; items: any[] }) {
           <TouchableBounce>
             <Text style={{ 
               fontSize: 16,
-              color: AC.systemBlue
+              color: AC.systemPurple
             }}>
               See All
             </Text>
