@@ -8,6 +8,7 @@
     "scheme": "x.movie",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "platforms": ["ios", "web"],
     "web": {
       "output": "server",
       "favicon": "./assets/images/icon.png"
@@ -27,7 +28,12 @@
       }
     },
     "plugins": [
-      "expo-router",
+      [
+        "expo-router",
+        {
+          "origin": "https://flix.expo.app/"
+        }
+      ],
       [
         "expo-splash-screen",
         {
