@@ -1,0 +1,12 @@
+name: PR Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  publish:
+    type: update
+    params:
+      branch: "pr-${{ github.event.pull_request.number }}"
+      message: "PR #${{ github.event.pull_request.number }}"
