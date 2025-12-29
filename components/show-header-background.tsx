@@ -14,7 +14,6 @@ import Animated, {
   useAnimatedStyle,
   useScrollViewOffset,
 } from "react-native-reanimated";
-import { BodyScrollView } from "./ui/BodyScrollView";
 
 import * as AC from "@bacons/apple-colors";
 import { useReanimatedHeaderHeight } from "react-native-screens/reanimated";
@@ -103,8 +102,9 @@ export function ShowPageBody({ children }: { children: React.ReactNode }) {
           ]}
         />
       </Animated.View> */}
-      <BodyScrollView
+      <Animated.ScrollView
         ref={ref}
+        style={{ backgroundColor: AC.systemGroupedBackground }}
         automaticallyAdjustsScrollIndicatorInsets={true}
         contentInsetAdjustmentBehavior="never"
       >
@@ -122,30 +122,33 @@ export function ShowPageBody({ children }: { children: React.ReactNode }) {
               if (process.env.EXPO_OS === "web") {
                 return <AnimatedShowHeaderBackground style={style} />;
               }
-              return <AnimatedShowHeaderBackgroundIos style={style} />;
+              return null;
             },
             headerTitle(props) {
-              return (
-                <Animated.Text
-                  style={[
-                    {
-                      width: "100%",
-                      color: AC.label,
-                      fontSize: 16,
-                      fontWeight: "600",
-                    },
-                    titleStyle,
-                  ]}
-                >
-                  {props.children}
-                </Animated.Text>
-              );
+              if (process.env.EXPO_OS === "web") {
+                return (
+                  <Animated.Text
+                    style={[
+                      {
+                        width: "100%",
+                        color: AC.label,
+                        fontSize: 16,
+                        fontWeight: "600",
+                      },
+                      titleStyle,
+                    ]}
+                  >
+                    {props.children}
+                  </Animated.Text>
+                );
+              }
+              return null;
             },
           }}
         />
 
         <ScrollContext.Provider value={ref}>{children}</ScrollContext.Provider>
-      </BodyScrollView>
+      </Animated.ScrollView>
     </>
   );
 }
