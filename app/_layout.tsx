@@ -1,5 +1,12 @@
-import { Icon, Label, NativeTabs } from "expo-router/unstable-native-tabs";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import {
+  Icon,
+  Label,
+  NativeTabs,
+  VectorIcon,
+} from "expo-router/unstable-native-tabs";
 import { StatusBar } from "expo-status-bar";
+import { Platform } from "react-native";
 import "react-native-reanimated";
 
 import ThemeProvider from "@/components/ui/ThemeProvider";
@@ -22,11 +29,29 @@ export default function RootLayout() {
             }}
           >
             <Label>Search</Label>
-            <Icon sf="magnifyingglass" />
+            {Platform.select({
+              ios: <Icon sf="magnifyingglass" />,
+              default: (
+                <Icon
+                  src={
+                    <VectorIcon family={MaterialCommunityIcons} name="magnify" />
+                  }
+                />
+              ),
+            })}
           </NativeTabs.Trigger>
           <NativeTabs.Trigger name="(settings)">
             <Label>From Expo</Label>
-            <Icon sf="app.gift.fill" />
+            {Platform.select({
+              ios: <Icon sf="app.gift.fill" />,
+              default: (
+                <Icon
+                  src={
+                    <VectorIcon family={MaterialCommunityIcons} name="gift" />
+                  }
+                />
+              ),
+            })}
           </NativeTabs.Trigger>
         </NativeTabs>
       </ReanimatedScreenProvider>
