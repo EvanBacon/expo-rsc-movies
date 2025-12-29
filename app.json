@@ -8,7 +8,7 @@
     "scheme": "x.movie",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "platforms": ["ios", "web"],
+
     "web": {
       "output": "server",
       "favicon": "./assets/images/icon.png"
@@ -31,7 +31,7 @@
       [
         "expo-router",
         {
-          "origin": "https://flix.expo.app/"
+          "origin": "https://flix--app.expo.app/"
         }
       ],
       [
@@ -53,6 +53,12 @@
       "eas": {
         "projectId": "07793961-ad0c-43ca-bce1-301475ecd214"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/07793961-ad0c-43ca-bce1-301475ecd214"
     }
   }
 }

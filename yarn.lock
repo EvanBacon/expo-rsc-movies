@@ -1067,7 +1067,7 @@
     wrap-ansi "^7.0.0"
     ws "^8.12.1"
 
-"@expo/code-signing-certificates@^0.0.5":
+"@expo/code-signing-certificates@0.0.5", "@expo/code-signing-certificates@^0.0.5":
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/@expo/code-signing-certificates/-/code-signing-certificates-0.0.5.tgz#a693ff684fb20c4725dade4b88a6a9f96b02496c"
   integrity sha512-BNhXkY1bblxKZpltzAx98G2Egj9g1Q+JRcvR7E99DOj862FTCX+ZPsAUtPTr7aHxwtrL7+fL3r0JSmM9kBm+Bw==
@@ -2428,6 +2428,11 @@ anymatch@^3.0.3:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
+arg@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/arg/-/arg-4.1.0.tgz#583c518199419e0037abb74062c37f8519e575f0"
+  integrity sha512-ZWc51jO3qegGkVh8Hwpv636EkbesNV5ZNQPCtRa+0qytRYPEs9IYT9qITY9buezqUH5uqyzlWLcufrzU2rffdg==
+
 arg@^5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/arg/-/arg-5.0.2.tgz#c81433cc427c92c4dcf4865142dbca6f15acd59c"
@@ -3739,6 +3744,11 @@ expo-constants@~18.0.11:
     "@expo/config" "~12.0.11"
     "@expo/env" "~2.0.8"
 
+expo-eas-client@~1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/expo-eas-client/-/expo-eas-client-1.0.8.tgz#f1fa7cbc6b6000046119466c6ded8a77e5a4b1f8"
+  integrity sha512-5or11NJhSeDoHHI6zyvQDW2cz/yFyE+1Cz8NTs5NK8JzC7J0JrkUgptWtxyfB6Xs/21YRNifd3qgbBN3hfKVgA==
+
 expo-file-system@~19.0.20:
   version "19.0.20"
   resolved "https://registry.yarnpkg.com/expo-file-system/-/expo-file-system-19.0.20.tgz#57850ecbca885c50e27eed59917fbb2742fd36c0"
@@ -3766,6 +3776,11 @@ expo-image@~3.0.11:
   resolved "https://registry.yarnpkg.com/expo-image/-/expo-image-3.0.11.tgz#54195565dc710e632c10414c3609deebb7149ac5"
   integrity sha512-4TudfUCLgYgENv+f48omnU8tjS2S0Pd9EaON5/s1ZUBRwZ7K8acEr4NfvLPSaeXvxW24iLAiyQ7sV7BXQH3RoA==
 
+expo-json-utils@~0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/expo-json-utils/-/expo-json-utils-0.15.0.tgz#6723574814b9e6b0a90e4e23662be76123ab6ae9"
+  integrity sha512-duRT6oGl80IDzH2LD2yEFWNwGIC2WkozsB6HF3cDYNoNNdUvFk6uN3YiwsTsqVM/D0z6LEAQ01/SlYvN+Fw0JQ==
+
 expo-keep-awake@~15.0.8:
   version "15.0.8"
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-15.0.8.tgz#911c5effeba9baff2ccde79ef0ff5bf856215f8d"
@@ -3778,6 +3793,14 @@ expo-linking@~8.0.10:
   dependencies:
     expo-constants "~18.0.11"
     invariant "^2.2.4"
+
+expo-manifests@~1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/expo-manifests/-/expo-manifests-1.0.10.tgz#5dfb3db1cdf6b46fee349f1d68a25edf5e087994"
+  integrity sha512-oxDUnURPcL4ZsOBY6X1DGWGuoZgVAFzp6PISWV7lPP2J0r8u1/ucuChBgpK7u1eLGFp6sDIPwXyEUCkI386XSQ==
+  dependencies:
+    "@expo/config" "~12.0.11"
+    expo-json-utils "~0.15.0"
 
 expo-modules-autolinking@3.0.23:
   version "3.0.23"
@@ -3845,6 +3868,11 @@ expo-status-bar@~3.0.9:
   dependencies:
     react-native-is-edge-to-edge "^1.2.1"
 
+expo-structured-headers@~5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/expo-structured-headers/-/expo-structured-headers-5.0.0.tgz#b3cc223a7a58964652093f088a8988316db9ed9d"
+  integrity sha512-RmrBtnSphk5REmZGV+lcdgdpxyzio5rJw8CXviHE6qH5pKQQ83fhMEcigvrkBdsn2Efw2EODp4Yxl1/fqMvOZw==
+
 expo-symbols@~1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/expo-symbols/-/expo-symbols-1.0.8.tgz#a46ae8fb46eb07ae9974c445595d2f342ed4dd30"
@@ -3859,6 +3887,31 @@ expo-system-ui@~6.0.9:
   dependencies:
     "@react-native/normalize-colors" "0.81.5"
     debug "^4.3.2"
+
+expo-updates-interface@~2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/expo-updates-interface/-/expo-updates-interface-2.0.0.tgz#7721cb64c37bcb46b23827b2717ef451a9378749"
+  integrity sha512-pTzAIufEZdVPKql6iMi5ylVSPqV1qbEopz9G6TSECQmnNde2nwq42PxdFBaUEd8IZJ/fdJLQnOT3m6+XJ5s7jg==
+
+expo-updates@~29.0.15:
+  version "29.0.15"
+  resolved "https://registry.yarnpkg.com/expo-updates/-/expo-updates-29.0.15.tgz#a135ed0915500f0e30f6d09a9e13318e99a9c651"
+  integrity sha512-6Qj+g56nnCksKKnEPQFm19dfWvYB5EggQNN3SaLbIj4LI40k/pjQwqYStEuwTU+Ow+PG0AqxIhQ3NvgVPEzLvg==
+  dependencies:
+    "@expo/code-signing-certificates" "0.0.5"
+    "@expo/plist" "^0.4.8"
+    "@expo/spawn-async" "^1.7.2"
+    arg "4.1.0"
+    chalk "^4.1.2"
+    debug "^4.3.4"
+    expo-eas-client "~1.0.8"
+    expo-manifests "~1.0.10"
+    expo-structured-headers "~5.0.0"
+    expo-updates-interface "~2.0.0"
+    getenv "^2.0.0"
+    glob "^13.0.0"
+    ignore "^5.3.1"
+    resolve-from "^5.0.0"
 
 expo-web-browser@~15.0.10:
   version "15.0.10"
